@@ -1,14 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const app = require("./src/app");
-
+const app = require("./src/app");""
+const {sendBirthdayEmails } = require("./src/utilities/email-utilities/sent_mail_daily")
 dotenv.config();
 
-app.use(cors());
 
-app.use(express.json());
-
+sendBirthdayEmails();
 
 
 app.listen(process.env.port, () => {
