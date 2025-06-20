@@ -1,7 +1,9 @@
 const express = require("express");
 const {  get_city_aadhar_user, user_registration, get_aadhar_count_s, get_aadhar_user_sc } = require("../controllers/auser.controler");
 const { uploadImage } = require("../controllers/file-upload/uploadImage");
-const { upload } = require("../app");
+
+const multer = require('multer');
+const upload = multer({dest: "/Uploads"});
 
 const router = express.Router();
 
